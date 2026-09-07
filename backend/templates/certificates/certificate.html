@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<style>
+
+body{
+font-family:Arial;
+padding:40px;
+background:#f4f6fb;
+}
+
+.container{
+background:white;
+border-radius:20px;
+overflow:hidden;
+border:1px solid #ddd;
+}
+
+.header{
+background:#0f172a;
+color:white;
+padding:35px;
+}
+
+.title{
+font-size:34px;
+font-weight:bold;
+}
+
+.subtitle{
+color:#cbd5e1;
+margin-top:5px;
+}
+
+.grade{
+
+width:140px;
+height:140px;
+border-radius:50%;
+background:#fbbf24;
+color:white;
+font-size:60px;
+font-weight:bold;
+text-align:center;
+line-height:140px;
+margin:30px auto;
+
+}
+
+.section{
+margin-top:25px;
+padding:20px;
+border-radius:15px;
+background:#fff;
+border:1px solid #ddd;
+}
+
+.green{
+
+background:#ecfdf5;
+border-left:8px solid #16a34a;
+
+}
+
+.orange{
+
+background:#fff7ed;
+border-left:8px solid #f97316;
+
+}
+
+table{
+
+width:100%;
+border-collapse:collapse;
+
+}
+
+td{
+
+padding:12px;
+border-bottom:1px solid #eee;
+
+}
+
+.footer{
+
+margin-top:50px;
+display:flex;
+justify-content:space-between;
+
+}
+
+.box{
+
+width:30%;
+border:1px solid #ddd;
+border-radius:12px;
+padding:20px;
+text-align:center;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+
+<div class="title">
+
+HAVENSURE
+
+</div>
+
+<div class="subtitle">
+
+PROPERTY QUALITY CERTIFICATE
+
+</div>
+
+</div>
+
+<div style="padding:40px">
+
+<h2 style="text-align:center">
+
+Property Inspection Certificate
+
+</h2>
+
+<div class="grade">
+
+{{ certificate.grade }}
+
+</div>
+
+<h2 style="text-align:center">
+
+Rating {{ certificate.rating }}/5
+
+</h2>
+
+<div class="section">
+
+<h3>Property Details</h3>
+
+<table>
+
+<tr>
+
+<td><b>Property</b></td>
+
+<td>{{ certificate.enquiry.property_address }}</td>
+
+</tr>
+
+<tr>
+
+<td><b>Client</b></td>
+
+<td>{{ certificate.enquiry.customer_name }}</td>
+
+</tr>
+
+<tr>
+
+<td><b>Engineer</b></td>
+
+<td>{{ certificate.engineer.name }}</td>
+
+</tr>
+
+<tr>
+
+<td><b>Issued</b></td>
+
+<td>{{ certificate.issued_at|date:"d M Y" }}</td>
+
+</tr>
+
+<tr>
+
+<td><b>Valid Till</b></td>
+
+<td>{{ certificate.valid_until|date:"d M Y" }}</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="section green">
+
+<h3>Inspection Findings</h3>
+
+<p>
+
+{{ certificate.findings }}
+
+</p>
+
+</div>
+
+<div class="section orange">
+
+<h3>Recommendations</h3>
+
+<p>
+
+{{ certificate.recommendations }}
+
+</p>
+
+</div>
+
+<div class="footer">
+
+<div class="box">
+
+<h3>Certified By</h3>
+
+<p>
+
+{{ certificate.engineer.name }}
+
+</p>
+
+</div>
+
+<div class="box">
+
+<h3>Status</h3>
+
+<p style="color:green">
+
+VERIFIED
+
+</p>
+
+</div>
+
+<div class="box">
+
+<h3>QR</h3>
+
+<p>Verification</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
