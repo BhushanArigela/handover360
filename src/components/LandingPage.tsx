@@ -15,7 +15,7 @@ export const LandingPage: React.FC = () => {
               <Shield className="w-5 h-5 text-white" />
             </div>
             <span className="text-xl font-bold text-gray-900">Certify<span className="text-blue-600">Build</span></span>*/}
-           <img src="https://tecnolynx.com/handover360/images/logo.png" width="200"    alt="Logo"  />
+           <img src="images/logo.png" width="200"    alt="Logo"  />
           </div>
           <div className="flex items-center gap-3">
             <button
@@ -219,8 +219,9 @@ export const LandingPage: React.FC = () => {
               {/* <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
                 <Shield className="w-4 h-4 text-white" />
               </div>
-              <span className="text-lg font-bold text-white">Handover360</span> */}
-              <img src="https://havensurecivtech.com/Havensure/images/42.png" width="150"    alt="Logo" className="h-12 w-auto brightness-0 invert"  />
+              <span className="text-lg font-bold text-white">Handover360</span> 
+              https://havensurecivtech.com/Havensure/images/42.png*/}
+              <img src="images/logo.png" width="150" alt="Logo" className="h-12 w-auto brightness-0 invert"  />
               </div>
             </div>
             <p className="text-sm">© 2026 Handover360. All rights reserved.</p>
