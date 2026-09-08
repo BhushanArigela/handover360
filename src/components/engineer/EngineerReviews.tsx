@@ -380,7 +380,7 @@ console.log("Responses:", data.responses);
                           {resp.media.map((m:any)=>(
                             <img
                             key={m.media_id}
-                            src={`${m.file}`}
+                            src={`${import.meta.env.BASE_URL}${m.file}`}
                             className="w-24 h-24 rounded object-cover"
                             />
                           ))}
