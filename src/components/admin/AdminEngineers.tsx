@@ -110,20 +110,35 @@ export const AdminEngineers: React.FC = () => {
         : "/users/create/";
 
       const method = isEditMode ? "PUT" : "POST";
-      const res = await apiFetch(
-        url,
-        {
-          method,
-          headers: {
-            "Content-Type": "application/json",
+      const formData = new FormData();
+
+        formData.append("name", newEng.name);
+        formData.append("email", newEng.email);
+        formData.append("phone", newEng.phone);
+        formData.append("role", "technical_auditor");
+
+        const res = await apiFetch(
+          url,
+          {
+            method,
+            body: formData,
           },
-          body: JSON.stringify({
-           ...newEng,
-            role: "technical_auditor",
-          }),
-        },
-        navigate
-      );
+          navigate
+        );
+      // const res = await apiFetch(
+      //   url,
+      //   {
+      //     method,
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //     },
+      //     body: JSON.stringify({
+      //      ...newEng,
+      //       role: "technical_auditor",
+      //     }),
+      //   },
+      //   navigate
+      // );
 
       // const data = await res.json();
       
@@ -132,7 +147,7 @@ export const AdminEngineers: React.FC = () => {
       } else {
         success("Technical Auditor created successfully");
 
-        alert(
+        console.log(
           `Technical Auditor created successfully!
 
           Username: ${res.data.username}
