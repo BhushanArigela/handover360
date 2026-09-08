@@ -15,7 +15,7 @@ export const LandingPage: React.FC = () => {
               <Shield className="w-5 h-5 text-white" />
             </div>
             <span className="text-xl font-bold text-gray-900">Certify<span className="text-blue-600">Build</span></span>*/}
-           <img src={`${import.meta.env.BASE_URL}images/logo.png`} width="200"    alt="Logo"  />
+           <img src="https://tecnolynx.com/handover360/images/logo.png" width="200"    alt="Logo"  />
           </div>
           <div className="flex items-center gap-3">
             <button
