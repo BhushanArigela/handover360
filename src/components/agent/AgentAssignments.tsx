@@ -139,109 +139,6 @@ export const AgentAssignments: React.FC = () => {
 
     const template = await res.json();
 
-//     const questions = Array.isArray(template.categories)
-//       ? template.categories.flatMap((c: any) =>
-//       (c.questions ?? []).map((q: any) => ({
-//         ...q,
-//         category: c.category_name,
-//       }))
-//     )
-//   : [];
-//   console.log("Template:", template);
-//     console.log("Sections:", template.categories);
-
-//         setTemplateQuestions(questions);
-// console.log(questions);
-//         const initial: Record<string, QuestionnaireResponse> = {};
-
-//           questions.forEach((q: any) => {
-//               initial[q.template_question_id] = {
-//                   questionId: q.template_question_id,
-
-//                   templateId: template.template_id,
-//                   templateQuestionId: q.template_question_id,
-
-//                   questionText: q.question_text,
-//                   questionType: q.type,
-
-//                   categoryId: q.category_id,
-//                   categoryName: q.category,
-
-//                   required: q.required,
-
-//                   hasScoring: q.has_scoring,
-//                   maxScore: q.max_score,
-
-//                   answer: "",
-
-//                   answerText: null,
-//                   answerBoolean: null,
-//                   answerNumber: null,
-//                   answerArray: [],
-
-//                   score: 0,
-
-//                   remarks: "",
-
-//                   isNA: false,
-
-//                   mediaUrls: [],
-//               };
-//           });
-
-//           try {
-//         const draftRes = await fetch(
-//             `${API_URL}/responses/inspection/draft/${enq.enquiry_id}/`,
-//             {
-//                 headers: {
-//                     Authorization: `Token ${token}`,
-//                 },
-//             }
-//         );
-
-//         const draft = await draftRes.json();
-//         console.log(draft);
-//         if (draft.draft_exists) {
-
-//             draft.responses.forEach((r: any) => {
-
-//                 if (!initial[r.template_question_id]) return;
-
-//                 initial[r.template_question_id] = {
-
-//                     ...initial[r.template_question_id],
-
-//                     answerText: r.answer_text,
-
-//                     answerBoolean: r.answer_boolean,
-
-//                     answerNumber: r.answer_number,
-
-//                     answerArray: r.answer_array || [],
-
-//                     remarks: r.remarks || "",
-
-//                     score: r.score || 0,
-
-//                     isNA: r.is_na,
-
-//                     answer:
-//                         r.answer_text ??
-//                         r.answer_boolean ??
-//                         r.answer_number ??
-//                         r.answer_array,
-//                 };
-
-//             });
-            
-//             setOverallNotes(draft.overall_notes || "");
-//         }
-
-//     } catch (err) {
-//         console.error(err);
-//     }
-
-      // setResponses(initial);
       setSubmitted(false);
       const statusResp = await fetch(
         `${API_URL}/enquiries/${enq.enquiry_id}/change-status/`,
@@ -252,7 +149,7 @@ export const AgentAssignments: React.FC = () => {
             Authorization: `Token ${token}`,
           },
           body: JSON.stringify({
-            status: "inspection_completed",
+            status: "inspection_in_progress",
             remarks: `Inspection started by ${
               currentUserDetail.name || currentUserDetail.username
             }`,
@@ -499,7 +396,7 @@ export const AgentAssignments: React.FC = () => {
     try {
       
       const token = localStorage.getItem("token");
-console.log("Token:", token);
+
       const res = await fetch(
         `${API_URL}/responses/inspection/save-draft/`,
         {
