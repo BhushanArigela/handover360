@@ -75,7 +75,7 @@ export const LandingPage: React.FC = () => {
             </div>
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-blue-500/20">
-                <img src="/images/hero-bg.jpg" alt="Construction Quality Inspection" className="w-full h-80 lg:h-[28rem] object-cover" />
+                <img src="images/hero-bg.jpg" alt="Construction Quality Inspection" className="w-full h-80 lg:h-[28rem] object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
