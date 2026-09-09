@@ -8,7 +8,7 @@ import {
     ChevronDown,
     ChevronRight, Building2
 } from "lucide-react";
-
+import { getMediaUrl } from '../../config/env';
 
 interface Props {
     open: boolean;
@@ -310,8 +310,8 @@ export const ReviewPreview: React.FC<Props> = ({
                                                                                 <img
                                                                                     key={photo.id}
                                                                                     className="cursor-pointer rounded-lg border h-30 w-full object-cover"
-                                                                                    src={`${import.meta.env.BASE_URL}${photo.file}`}
-                                                                                    onClick={() => window.open(`${import.meta.env.BASE_URL}${photo.file}`, "_blank")}
+                                                                                    src={getMediaUrl(photo.file)}
+                                                                                    onClick={() => window.open(getMediaUrl(photo.file), "_blank")}
                                                                                     alt=""
                                                                                     
                                                                                     

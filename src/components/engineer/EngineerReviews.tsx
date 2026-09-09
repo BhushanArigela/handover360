@@ -7,7 +7,7 @@ import { StarRating } from '../ui/StarRating';
 import { apiRequest } from "../../api/api";
 import { MapPin, Calendar, User, FileCheck, CheckCircle, Award } from 'lucide-react';
 import { toast } from "react-toastify";
-import { API_URL, BASE_URL } from '../../config/env';
+import { API_URL, getMediaUrl } from '../../config/env';
 
 
 export const EngineerReviews: React.FC = () => {
@@ -380,7 +380,7 @@ console.log("Responses:", data.responses);
                           {resp.media.map((m:any)=>(
                             <img
                             key={m.media_id}
-                            src={`${import.meta.env.BASE_URL}${m.file}`}
+                            src={getMediaUrl(m.file)}
                             className="w-24 h-24 rounded object-cover"
                             />
                           ))}
