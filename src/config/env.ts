@@ -9,23 +9,30 @@ if (!BASE_URL) {
     throw new Error("VITE_URL is not defined");
 }
 
-const getMediaUrl = (path: string) => {
-    if (!path) {
-        return "";
-    }
+const MEDIA_URL = `${BASE_URL}/media`;
 
-    // If Django already returns a complete URL
+const getMediaUrl = (path: string) => {
+    if (!path) return "";
+
+    // Absolute URL
     if (path.startsWith("http://") || path.startsWith("https://")) {
         return path;
     }
 
-    // Django returns something like:
-    // /handover360/backend/media/photos/test.jpg
-    if (path.startsWith("/")) {
-        return `${window.location.origin}${path}`;
+    // Remove leading slash
+    path = path.replace(/^\/+/, "");
+
+    // If Django returns:
+    // handover360/backend/media/inspection_media/09-09.png
+    // or
+    // handover360/media/inspection_media/09-09.png
+    const mediaIndex = path.indexOf("media/");
+
+    if (mediaIndex !== -1) {
+        path = path.substring(mediaIndex + "media/".length);
     }
 
-    return `${window.location.origin}/${path}`;
+    return `${MEDIA_URL}/${path}`;
 };
 
 export {
