@@ -6,6 +6,7 @@ import { useApp } from "../../context/AppContext";
 import { apiFetch } from "../../services/api";
 import { success, error } from "../../utils/toast";
 import { formatDate } from "../../utils/date";
+import { getMediaUrl } from '../../config/env';
 
 type AgentStats = {
   total: number;
@@ -413,7 +414,7 @@ const closeModal = () => {
                           {agent.documents.map((doc) => (
                             <a
                                 key={doc.id}
-                                href={`${import.meta.env.VITE_URL}${doc.file}`}
+                                href={typeof doc.file === "string" ? getMediaUrl(doc.file) : "#"}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="block text-xs text-blue-600 underline truncate"
