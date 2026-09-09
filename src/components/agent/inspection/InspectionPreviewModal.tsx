@@ -8,7 +8,7 @@ import {
     ChevronDown,
     ChevronRight, Building2
 } from "lucide-react";
-import { BASE_URL } from '../../../config/env';
+import { getMediaUrl } from '../../../config/env';
 
 interface Props {
     open: boolean;
@@ -311,8 +311,8 @@ export const InspectionPreviewModal: React.FC<Props> = ({
                                                                                     <img
                                                                                         key={photo.id}
                                                                                         className="cursor-pointer rounded-lg border h-30 w-full object-cover"
-                                                                                        src={`${import.meta.env.BASE_URL}${photo.file}`}
-                                                                                        onClick={() => window.open(`${import.meta.env.BASE_URL}${photo.file}`, "_blank")}
+                                                                                        src={getMediaUrl(photo.file)}
+                                                                                        onClick={() => window.open(getMediaUrl(photo.file), "_blank")}
                                                                                         alt=""
                                                                                         
                                                                                     />
@@ -352,7 +352,7 @@ export const InspectionPreviewModal: React.FC<Props> = ({
                                                                                         className="rounded-lg border border-gray-200 w-full"
                                                                                     >
                                                                                         <source
-                                                                                            src={`${import.meta.env.BASE_URL}${video.file}`}
+                                                                                            src={getMediaUrl(video.file)}
                                                                                         />
                                                                                     </video>
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect  } from "react";
-import { BASE_URL } from '../../../config/env';
+import { getMediaUrl } from '../../../config/env';
 
 interface Props {
     item: any;
@@ -101,7 +101,7 @@ export const InspectionReviewForm: React.FC<Props> = ({
                             {response.photos.map((photo: any, index: number) => (
                                 <img
                                     key={index}
-                                    src={`${import.meta.env.BASE_URL}${photo.file}`}
+                                    src={getMediaUrl(photo.file)}
                                     className="w-28 h-28 rounded border border-gray-200 object-cover"
                                 />
                             ))}
@@ -126,7 +126,7 @@ export const InspectionReviewForm: React.FC<Props> = ({
                                     controls
                                     className="w-64 rounded border border-gray-200"
                                 >
-                                    <source src={`${import.meta.env.BASE_URL}${video.file}`} />
+                                    <source src={getMediaUrl(video.file)} />
                                 </video>
                             ))}
 

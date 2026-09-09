@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { apiRequest } from "../../../api/api";
-import { BASE_URL } from '../../../config/env';
+import { getMediaUrl } from '../../../config/env';
 
 import {
     Camera,
@@ -279,7 +279,7 @@ export const InspectionItemForm: React.FC<Props> = ({
                                     className="relative group"
                                 > 
                                     <img
-                                        src={`${BASE_URL}${photo.file}`}
+                                        src={getMediaUrl(photo.file)}
                                         alt=""
                                         className="w-full h-28 object-cover rounded-lg border-gray-300 border"
                                     />
@@ -327,7 +327,7 @@ export const InspectionItemForm: React.FC<Props> = ({
                                         className="w-full rounded"
                                     >
                                         <source
-                                            src={`${BASE_URL}${video.file}`}
+                                            src={getMediaUrl(video.file)}
                                         />
                                     </video>
 
