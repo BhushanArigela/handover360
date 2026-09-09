@@ -349,11 +349,11 @@ export const ReviewPreview: React.FC<Props> = ({
                                                                                 <video
                                                                                     key={video.id}
                                                                                     controls
-                                                                                    onClick={() => window.open(`${import.meta.env.BASE_URL}${video.file}`, "_blank")}
+                                                                                    onClick={() => window.open(getMediaUrl(video.file), "_blank")}
                                                                                     className="rounded-lg border border-gray-200 w-full"
                                                                                 >
                                                                                     <source
-                                                                                        src={`${import.meta.env.BASE_URL}${video.file}`}
+                                                                                        src={getMediaUrl(video.file)}
                                                                                     />
                                                                                 </video>
 
