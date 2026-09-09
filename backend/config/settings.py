@@ -111,7 +111,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
 ]
 
-MEDIA_URL = "/handover360/media/"
+MEDIA_URL = "/handover360/backend/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # MEDIA_ROOT = BASE_DIR / "media"
 # Password validation
