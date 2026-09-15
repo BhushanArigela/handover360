@@ -121,7 +121,7 @@ def create_user(request):
 
     create_notification(
         recipient=user,
-        title="Welcome to HavEnsure",
+        title="Welcome",
         message="Your account has been created successfully.",
         notification_type="general",
     )    
