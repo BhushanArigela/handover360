@@ -185,31 +185,7 @@ export const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Demo Logins */}
-      {/* <section className="py-16 bg-white border-t border-gray-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-xl font-bold text-gray-900 mb-2">🔐 Demo Access</h3>
-          <p className="text-gray-500 text-sm mb-6">Use these credentials to explore each role (any password works)</p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {[
-              { role: 'Admin', email: 'admin@Handover360.com', color: 'bg-red-50 text-red-700 border-red-200' },
-              { role: 'Builder', email: 'rajesh@builder.com', color: 'bg-orange-50 text-orange-700 border-orange-200' },
-              { role: 'Agent', email: 'amit@agent.com', color: 'bg-blue-50 text-blue-700 border-blue-200' },
-              { role: 'Engineer', email: 'meera@engineer.com', color: 'bg-purple-50 text-purple-700 border-purple-200' },
-            ].map((d) => (
-              <button
-                key={d.role}
-                onClick={() => navigate('login')}
-                className={`p-3 rounded-xl border text-left hover:shadow-md transition-all ${d.color}`}
-              >
-                <div className="text-xs font-bold">{d.role}</div>
-                <div className="text-xs mt-1 opacity-75 truncate">{d.email}</div>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
+      
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-400 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -219,12 +195,12 @@ export const LandingPage: React.FC = () => {
               {/* <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
                 <Shield className="w-4 h-4 text-white" />
               </div>
-              <span className="text-lg font-bold text-white">Handover360</span> 
+              <span className="text-lg font-bold text-white">Construction Quality Certification</span> 
               https://havensurecivtech.com/Havensure/images/42.png*/}
               <img src="images/logo.png" width="150" alt="Logo" className="h-12 w-auto brightness-0 invert"  />
               </div>
             </div>
-            <p className="text-sm">© 2026 Handover360. All rights reserved.</p>
+            <p className="text-sm">© 2026 All rights reserved.</p>
           </div>
         </div>
       </footer>
