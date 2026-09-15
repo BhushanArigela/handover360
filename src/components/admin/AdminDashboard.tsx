@@ -168,7 +168,7 @@ export const AdminDashboard: React.FC = () => {
     <DashboardLayout>
       <div className="mb-8">
         <h2 className="text-2xl font-bold text-gray-900">Welcome, {(currentUser?.name?.trim() ? currentUser.name.split(" ")[0] : currentUser?.username) || "User"} ⚙️</h2>
-        <p className="text-gray-500 mt-1">Overview of the Handover360 platform.</p>
+        <p className="text-gray-500 mt-1">Overview of the platform.</p>
       </div>
 
       {/* Stats */}
