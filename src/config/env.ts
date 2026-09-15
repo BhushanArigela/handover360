@@ -9,7 +9,7 @@ if (!BASE_URL) {
     throw new Error("VITE_URL is not defined");
 }
 
-const MEDIA_URL = `${BASE_URL}/media`;
+const MEDIA_URL = `${BASE_URL}/backend/media`;
 
 const getMediaUrl = (path: string) => {
     if (!path) return "";
