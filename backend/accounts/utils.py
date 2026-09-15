@@ -20,7 +20,7 @@ def send_welcome_email(
     )
 
     msg = EmailMultiAlternatives(
-        subject="Welcome to HavEnsure",
+        subject="Welcome",
         body="Your account has been created.",
         to=[email]
     )
