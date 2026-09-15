@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import { API_URL } from '../../config/env';
 
 export const NewEnquiry: React.FC = () => {
-  const { currentUser, createEnquiry, navigate } = useApp();
+  const { currentUser, navigate } = useApp();
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({
     propertyType: '',
@@ -218,12 +218,12 @@ export const NewEnquiry: React.FC = () => {
               className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-sm bg-white"
             >
               <option value="">Select construction stage</option>
-              {/* <option>Foundation Stage</option>
-              <option>Structural Stage</option>
-              <option>Brick/Block Work Stage</option>
-              <option>Plumbing & Electrical Stage</option>
-              <option>Finishing Stage</option> */}
-              <option>Handover</option>
+              <option value="Foundation Stage">Foundation Stage</option>
+              <option value="Structural Stage">Structural Stage</option>
+              <option value="Brick/Block Work Stage">Brick/Block Work Stage</option>
+              <option value="Plumbing & Electrical Stage">Plumbing & Electrical Stage</option>
+              <option value="Finishing Stage">Finishing Stage</option>
+              <option value="Handover">Handover</option>
             </select>
           </div>
 
