@@ -104,7 +104,7 @@ export const LoginPage: React.FC = () => {
               <Shield className="w-7 h-7 text-white" />
             </div>
             <h1 className="text-2xl font-bold text-gray-900">Welcome Back</h1>
-            <p className="text-gray-500 text-sm mt-1">Sign in to Handover360</p>
+            <p className="text-gray-500 text-sm mt-1">Sign in</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -161,27 +161,6 @@ export const LoginPage: React.FC = () => {
             </button>
           </div>
 
-          {/* Quick Demo Logins */}
-          {/* <div className="mt-8 pt-6 border-t border-gray-100">
-            <p className="text-xs text-gray-400 text-center mb-3">Quick Demo Login</p>
-            <div className="grid grid-cols-2 gap-2">
-              {[
-                { label: '👤 Admin', email: 'admin@havensure.com' },
-                { label: '🏗️ Builder', email: 'rajesh@havensure.com' },
-                { label: '🏠 Buyer', email: 'priya@havensure.com' },
-                { label: '📋 Field Engineer', email: 'amit@havensure.com' },
-                { label: '👨‍🔬 Tecnical Auditor', email: 'meera@havensure.com' },
-              ].map((d) => (
-                <button
-                  key={d.email}
-                  onClick={() => quickLogin(d.email)}
-                  className="px-3 py-2 text-xs font-medium text-gray-600 bg-gray-50 hover:bg-blue-50 hover:text-blue-700 rounded-lg transition-colors text-left truncate"
-                >
-                  {d.label}
-                </button>
-              ))}
-            </div>
-          </div> */}
         </div>
       </div>
     </div>
