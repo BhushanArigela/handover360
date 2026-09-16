@@ -197,7 +197,7 @@ export const LandingPage: React.FC = () => {
               </div>
               <span className="text-lg font-bold text-white">Construction Quality Certification</span> 
               https://havensurecivtech.com/Havensure/images/42.png*/}
-              <img src="images/logo.png" width="150" alt="Logo" className="h-12 w-auto brightness-0 invert"  />
+              <img src="images/logo.png" width="50" alt="Logo" />
               </div>
             </div>
             <p className="text-sm">© 2026 All rights reserved.</p>
