@@ -25,7 +25,7 @@ const roleNavItems: Record<string, NavItem[]> = {
     { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard, page: 'admin-dashboard' },
     { id: 'enquiries', label: 'All Enquiries', icon: ClipboardList, page: 'admin-enquiries' },
     { id: 'agents', label: 'Field Engineers', icon: UserCheck, page: 'admin-agents' },
-    { id: 'engineers', label: 'Tecnical Auditors', icon: Award, page: 'admin-engineers' },
+    { id: 'engineers', label: 'Technical Auditors', icon: Award, page: 'admin-engineers' },
     { id: 'users', label: 'All Users', icon: Users, page: 'admin-users' },
     { id: 'certificates', label: 'Certificates', icon: Shield, page: 'admin-certificates' },
     {
@@ -81,7 +81,7 @@ const roleLabels: Record<string, string> = {
   builder: 'Builder',
   buyer: 'Buyer',
   field_engineer: 'Field Engineer',
-  technical_auditor: 'Tecnical Auditos',
+  technical_auditor: 'Technical Auditor',
 };
 
 const roleColors: Record<string, string> = {
